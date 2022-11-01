@@ -9,9 +9,10 @@ times = 100_000_000
 
 
 def for_loop():
-    my_list = []
+    total = 0
     for i in range(times):
-        my_list.append(i)
+        total += i
+    return total
 
 
 def while_loop():
@@ -34,6 +35,11 @@ def sum_math():
     return (times * (times - 1)) // 2
 
 
+# create a function that takes two numbers and prints who how many percent faster the first number is compared to the second number
+def percentage_difference(first, second):
+    return ((first - second) / first) * 100 + "%"
+
+
 def main():
     for_looped = timeit.timeit(for_loop, number=1)
     while_looped = timeit.timeit(while_loop, number=1)
@@ -41,15 +47,16 @@ def main():
     sum_ranged_numpy = timeit.timeit(sum_range_numpy, number=1)
     sum_mathed = timeit.timeit(sum_math, number=1)
 
-
     print(f'{"For loop":<10} {for_looped:.3f} {"seconds":<8}')
     print(f'{"While loop":<10} {while_looped:.3f} {"seconds":<8}')
 
     # print the difference between the two loops
     print(f'{"Difference":<10} {while_looped - for_looped:.3f} {"seconds":<8}')
 
-    # print the percentage difference between the two loops
-    print(f'{"Percentage difference":<10} {((while_looped - for_looped) / while_looped) * 100:.3f} {"%":<8}')
+    # print how much faster is the for loop compared to the while loop
+    print(f'{"For loop is":<10} {for_looped / while_looped:.3f} {"times faster":<8}')
+    # how many percent faster is the for loop compared to the while loop
+    print(f'{"For loop is":<10} {for_looped / while_looped * 100:.3f} {"percent faster":<8}')
 
     # print the sum of the range
     print(f'{"Sum of range":<10} {sum_ranged}')
