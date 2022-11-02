@@ -35,6 +35,7 @@ def sum_math():
     return (times * (times - 1)) // 2
 
 
+
 def main():
     for_looped = timeit.timeit(for_loop, number=1)
     while_looped = timeit.timeit(while_loop, number=1)
@@ -46,7 +47,7 @@ def main():
     print(f'{"While loop":<10} {while_looped:.3f} {"seconds":<8}')
 
     # how many times faster is the for loop compared to the while loop
-    print(f'{"For loop":<10} is {for_looped / while_looped:.2f} times faster than {"while loop":<10}')
+    print(f'{"For loop":<10} is {while_looped / for_looped:.2f} times faster than {"while loop":<10}')
 
     # how many percent faster is the for than the while loop
     print(f'{"For loop":<10} is {for_looped / while_looped * 100:.2f} % faster than {"while loop":<10}')
