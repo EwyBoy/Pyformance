@@ -11,3 +11,4 @@ Python is a very powerful language and is used in a lot of places. But it is als
 This course is divided into 3 parts. The first part is about the basics of python. It will teach you about the basic syntax of python and how to write a simple python script. The second part is about the performance of python. It will teach you about the performance of python and how to optimize your code. The third part is about the optimization of python. It will teach you about the optimization of python and how to optimize your code.
 
 The course is made by Eivind Norling and is licensed under the MIT license. You can find the source code for the course in this repository.
+
